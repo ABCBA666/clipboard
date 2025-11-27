@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量商品维护</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>批量商品维护</h1>
+        <div class="form-container">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">选择文件 (CSV/Excel):</label>
+                    <input type="file" id="file" name="file" accept=".csv,.xlsx" required>
+                </div>
+                <div class="form-group">
+                    <p>文件格式要求：</p>
+                    <ul>
+                        <li>CSV 或 Excel 格式</li>
+                        <li>第一行应为表头：商品ID,商品名称,价格</li>
+                        <li>每行一个商品信息</li>
+                    </ul>
+                </div>
+                <button type="submit" class="yellow-button">上传并处理</button>
+                <a href="/" class="back-button">返回</a>
+            </form>
+            <div class="template-download">
+                <p>下载模板文件：</p>
+                <a href="/templates/products_template.csv" class="yellow-button">下载CSV模板</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
